@@ -1,5 +1,5 @@
 module.exports = {
-  mode: 'production',
+
   "transpileDependencies": [
     "vuetify",
     "vue-tel-input-vuetify"
