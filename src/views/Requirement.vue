@@ -377,12 +377,12 @@
                   </p>
               </v-card-subtitle>
                 
-              <v-card-text class="justify-center" >
+              <v-card-text class="category" >
                   <p >{{ this.$t('successful')}}</p>
                   <br>  {{ this.$t('thank you for trusting us. ') }}  
               </v-card-text>
               <v-card-actions class="ml-10 justify-center">
-              <v-btn  color="success" @click="accepted">OK</v-btn>
+              <v-btn rounded  color="success" @click="accepted">OK</v-btn>
               </v-card-actions>
       
           </v-card>

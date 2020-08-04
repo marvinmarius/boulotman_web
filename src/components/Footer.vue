@@ -1,10 +1,8 @@
 <template>
 
-   <v-container fluid class="black  justify-sm-center justify-space-between " >
+   <v-container fluid class="grey darken-4  justify-sm-center justify-space-between " >
           <v-row 
-              
-              class="flex justify-space-between ma-n3 "
-              
+              class="justify-space-around ma-n3 "  
            >
         <v-col cols="12" sm="3" md="3" lg="3" >
           
@@ -21,8 +19,6 @@
       
         </v-col>
         <v-col cols="12" sm="3" md="3" lg="3">
-          
-       
         <v-card-text class="justify-center text-decoration-underline xxx">Socials</v-card-text>
         <v-list-item-group class="justify-center grp">
         <p class="v-list-item--link"><v-icon color="yellow"  size="24px" left>mdi-facebook</v-icon>
@@ -30,15 +26,11 @@
         <p class="v-list-item--link"><v-icon color="yellow"  size="24px" left>mdi-instagram</v-icon>Instagram</p>
         <p class="v-list-item--link"><v-icon color="yellow" size="24px" left>mdi-twitter</v-icon>Twitter</p>
         </v-list-item-group>
-          
-
         </v-col>
 
-        <v-col cols="12" sm="3" md="3" lg="3" >
-          
-              
+        <v-col cols="12" sm="3" md="3" lg="3" >      
          <v-card-text class="justify-center"><p class="text-decoration-underline xxx">{{$t('Useful Links')}}</p></v-card-text>
-    <v-list-item-group class="justify-center flex-column grp">
+    <v-list-item-group class="justify-center  grp">
             <p class="v-list-item--link">
               <v-icon color="yellow" size="24px" left>mdi-book-open-page-variant</v-icon>
               <router-link class="text--white" @click.native="scrollToTop" :to="`/${$i18n.locale}/about`">
@@ -62,18 +54,10 @@
              <router-link class="text--white" @click.native="scrollToTop" :to="`/${$i18n.locale}/terms-and-conditions`" >
             {{$t('Terms & Conditions')}}
              </router-link>
-            </p>
-           
-           
-    </v-list-item-group>
-       
-        
-          
-    
-        
-          
+            </p>  
+    </v-list-item-group>  
         </v-col>
-        <v-col cols="12" sm="3" md="3" lg="3" class="flex " >
+        <v-col cols="12" sm="3" md="3" lg="3" >
          
        <v-card-text class="justify-center"><p class="text-decoration-underline xxx">{{ $t('Our Contacts')}}</p></v-card-text>
      <v-list-item-group class="justify-center grp">
@@ -90,7 +74,7 @@
      
           <v-col cols="12 ">
           
-       <v-card-text class="text-center black mb-n5 xxxx"><p class="text-decoration-underline"><strong>{{ new Date().getFullYear() }} — </strong>
+       <v-card-text class="text-center grey darken-4 mb-n5 xxxx"><p class="text-decoration-underline"><strong>{{ new Date().getFullYear() }} — </strong>
          <strong>{{ $t('All Rights Reserved')}} </strong></p></v-card-text>
          
         
@@ -127,7 +111,7 @@ export default {
 
 .v-list-item--link a:hover{
 
-  color:blue;
+  color:yellow;
   
 }
 .xxx{

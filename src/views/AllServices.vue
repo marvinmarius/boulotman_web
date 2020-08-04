@@ -1,5 +1,5 @@
 <template>
-<v-container fluid>
+<v-container >
   <v-overlay  :opacity="1"
       :value="overlay">
       <v-progress-circular indeterminate size="64">loading...</v-progress-circular>
