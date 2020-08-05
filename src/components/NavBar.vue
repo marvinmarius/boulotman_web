@@ -4,9 +4,9 @@
                 <v-app-bar app  dark fade-img-on-scroll
                prominent
               clipped-left
-               src="../assets/home.jpg"
+               class="blue-grey darken-4"
                hide-on-scroll
-               height="120"
+               height="130"
                fixed
               
              
@@ -17,7 +17,7 @@
                 </v-app-bar-nav-icon>
                
 
-        <router-link :to="`/${$i18n.locale}`" class="font-bold text-xl flex items-end">
+        <router-link :to="`/${$i18n.locale}`" >
              <v-img
           alt="boulotman Logo"
           class="shrink mr-2"
@@ -30,8 +30,8 @@
           
     <v-spacer></v-spacer>
 
-              <v-toolbar-items class="mt-9 hidden-sm-and-down">
-                <nav class="items-center mb-1 mt-10 ">                                  
+              <v-toolbar-items class="mt-14  hidden-sm-and-down">
+                <nav class="items-center mb-1 mt-14 ">                                  
     <ul>
       <li class="mr-1 mb-2  lg:mb-0 ">
             <v-btn text exact :to="`/${$i18n.locale}`">{{$t('nav.Home')}}</v-btn>
@@ -42,30 +42,35 @@
       <li class="mr-1 mb-2 lg:mb-0">
       <v-btn text exact :to="`/${$i18n.locale}/about`">{{$t('nav.ABOUT US')}}</v-btn>
       </li>
-       <li class="mr-1 mb-2 lg:mb-0">
-      <v-btn text exact :to="`/${$i18n.locale}/categories`">{{$t('nav.CATEGORIES')}}</v-btn>
-      </li>
+     
        <li class="mr-1 mb-2 lg:mb-0">
       <v-btn text exact :to="`/${$i18n.locale}/rrr`">{{$t('nav.BLOG')}}</v-btn>
       </li>
        <li class="mr-1 mb-2 lg:mb-0">
       <v-btn text exact :to="`/${$i18n.locale}/step`">{{$t('nav.FAQ')}}</v-btn>
       </li>
-      <li class="mb-1 lg:mb-0 mb-2">
-            <LanguageSwitcher/>
-        </li>
-          
+       <li class="mr-1 mb-2 lg:mb-0">
+      <LanguageSwitcher/>
+      </li>
+   
     </ul>
-     
             </nav>
+
               </v-toolbar-items>
 
-  <v-spacer></v-spacer>
+  <v-spacer ></v-spacer>
+   
+      
 
-         
-         <v-btn rounded @click="toggleTheme" color="primary" class="mr-2">{{buttonText}}</v-btn>
+      <v-btn class="buttone text-capitalize mt-16 pa-4 "  :to="`/${$i18n.locale}/services`" v-html="$t('technician')"></v-btn>
+      <v-btn rounded @click="toggleTheme" color="primary" class=" text-lowercase ">{{buttonText}}</v-btn>
+         <template v-slot:extension>
+           <v-tabs align-with-title>
+             
+          <v-btn rounded class="ml-4 call red"><v-icon color="yellow" size="24px" left>mdi-phone</v-icon><a class="call" href="tel: +237698884618">Call Us</a></v-btn>
+           </v-tabs>
+         </template>
 
-          
      </v-app-bar>
 <v-card>
   <v-navigation-drawer 
@@ -112,14 +117,7 @@
                     </v-list-item-title> 
                 </v-list-item>
 
-                  <v-list-item class="items">
-                    <v-list-item-icon>
-                        <v-icon >mdi-palette-swatch</v-icon>
-                    </v-list-item-icon>
-                        <v-list-item-title>
-                    <router-link  class="item" :to="`/${$i18n.locale}/categories`">{{$t('nav.CATEGORIES')}}</router-link>                       
-                    </v-list-item-title>    
-                  </v-list-item>
+                 
 
                   <v-list-item class="items">
                     <v-list-item-icon>
@@ -206,6 +204,76 @@ data: () => ({
 </script>
 <style scoped>
 
+.buttone {
+  min-width: 300px;
+  min-height: 60px;
+  font-size: 22px;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #1c1cc4;
+background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgb(185, 209, 79) 100%);
+  border: none;
+  border-radius: 200px;
+  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 15px;
+  text-align: center;
+
+ 
+}
+
+.buttone:hover {background-color: hsl(120, 26%, 7%)}
+
+.buttone:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.buttone::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  border: 4px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+ 
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+.buttone:hover::after, .buttone:focus::after {
+  animation: none;
+  display: none;
+}
+
+
+.buttone:hover, .buttone:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+.buttone:hover::before, .buttone:focus::before {
+  opacity: 1;
+
+}
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
 
 .item:hover{
   color:blue;
@@ -215,11 +283,24 @@ data: () => ({
 .li{
   color: black
 }
-.item{
+.item {
    text-decoration-style: none;
   text-decoration: none;
    color: black;
   font: bold;
+}
+.call{
+   list-style: none;
+    text-decoration: none;
+    color: wheat;
+    
+}
+.call:hover{
+ 
+  background-color: brown;
+  border-radius: 10px
+   
+    
 }
 ul{
     list-style: none;
@@ -236,10 +317,9 @@ ul{
 
   }
   nav ul li {
-   position: relative;
+ position: relative;
     transition: .2s ease-in-out;
-    
-    
+
   }
 
 li{
@@ -249,11 +329,17 @@ li{
   
 }
 
-
+ul li:focus{
+  color:  blue;
+ 
+  transform: translateY(-6px);
+   
+}
 ul li:hover{
   color:  blue;
   background-color: brown;
-  border-radius: 10px
+  border-radius:10px;
+  transform: translateY(-6px);
    
 }
 ul li:active{

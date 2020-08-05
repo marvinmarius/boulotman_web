@@ -70,6 +70,8 @@
     
   },
   "FirstName":"FirstName",
+  "Follow Us":"Follow Us",
+  "technician":"Book a Technician",
   "LastName": "LastName",
   "Personal Address": "Personal Address",
   " phone": "Enter a phone number",
@@ -116,7 +118,7 @@
   "items": 
 
     {
-      "titlet": "we are a company of technicians that will cover all your building repair, maintenance and construction projects",
+      "titlet": "We are a company of technicians that will cover all your building repair, maintenance and construction projects.",
       "title": "Use the link bellow to Contact us",
       "titles": "book a technician  for guaranteed satisfaction",
       "titlea": "Anytime, Anywhere , we are available to serve you",

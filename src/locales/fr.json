@@ -60,8 +60,10 @@
     "1":"Durée: début du mandat; fin de mandat: indéfinie, ou services exécutés et paiement effectué; chaque contrat distinct.",
     "24": "Interprétation: références statutaires; les titres de section n'affectant pas l'interprétation; signification du mois civil; aucun ejusdem generis.",
     "mail": "Par Email",
+    "technician":"Reserver un Technicien",
 
     "bookk": "RESERVER",
+    "Follow Us":"Suivez Nous",
     "requirement": "exigences envoyée avec succès",
     "condition": "j'ai lu et j'accepte",
     "conditions" : "vous devez lire et accepter pour continuer",
@@ -116,7 +118,7 @@
     "items": 
 
     {
-      "titlet": "nous sommes une entreprise de techniciens qui couvrira tous vos projets de réparation, d'entretien et de construction de bâtiments",
+      "titlet": "Nous sommes une entreprise de techniciens qui couvrira tous vos projets de réparation, d'entretien et de construction de bâtiments.",
       "title": "Utilisez le lien ci-dessous pour nous contacter",
       "titles": "réservez un technicien  pour une satisfaction garantie",
       "titlea": "n'importe quand n'importe où, nous sommes là pour vous servir",

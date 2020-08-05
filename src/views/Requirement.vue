@@ -1,8 +1,8 @@
 <template >
 
-  <v-container fluid > 
+  <v-container> 
  
-     <v-col cols="12"  class="hidden-md-and-up ml-10">
+     <v-col cols="12"  class="hidden-md-and-up ">
      <v-card class="justify-center " dark>
  
           <v-card-title class="categorie text-decoration-underline">
@@ -17,7 +17,7 @@
   </v-col>
 <v-divider></v-divider>  
    
-<div class="align-center ml-10 flex">
+<div class="align-center flex">
   <v-col cols="12" md="7">
   <v-alert
       text
@@ -38,7 +38,7 @@
 </div>
 <v-divider></v-divider>
 
-    <div class=" ml-10 mb-n6">
+    <div class="  mb-n6">
     <v-col cols="12" sm="6" md="5"  
    
     >
@@ -68,7 +68,7 @@
     
 <v-row class="justify-space-between">
   <v-col>
-     <v-card dark width="800" class=" ml-10 mt-4">
+     <v-card dark  class="  mt-4">
         <v-card-title class="justify-center green" > {{$t('form.title')}}
           <div><h3 class="text--red mr-4" >{{this.$route.params.id}}</h3></div>
         </v-card-title>
