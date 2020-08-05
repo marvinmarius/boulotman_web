@@ -1,13 +1,13 @@
 <template>
 <v-container fluid>
    
-                <v-app-bar app  dark fade-img-on-scroll
+                <v-app-bar app  dark 
                prominent
               clipped-left
                class="blue-grey darken-4"
                hide-on-scroll
-               height="130"
-               fixed
+               height="120"
+               
               
              
                 >
