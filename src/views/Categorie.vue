@@ -37,8 +37,8 @@
     ></v-img>
               <v-card-text class="text-center">
                 <p><strong>{{categorie.name}}</strong></p>
-                <p class="red--text">Eplore to see our services </p>
-                  <p class="hint">{{categorie.hint}}</p>
+                
+                  <p class="hint red--text">{{categorie.hint}}</p>
               </v-card-text>
               <v-card-actions>
                 <div class="text-center mx-auto  bg-black">

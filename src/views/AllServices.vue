@@ -43,8 +43,8 @@
 
               <v-card-text class="text-center">
                 <p><strong>{{allservice.name}}</strong></p>
-                 <p class="red--text">{{allservice.sub_services_count}} sub-services </p>
-                  <p class="hint">{{allservice.hint}}</p>
+                
+                  <p class="hint red--text">{{allservice.hint}}</p>
               </v-card-text>
               <v-card-actions>
                 <div class="text-center mx-auto bg-black">
