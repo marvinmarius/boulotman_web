@@ -1,13 +1,13 @@
 <template>
 <v-container fluid>
    
-                <v-app-bar app  dark 
+                <v-app-bar app  dark fade-img-on-scroll
                prominent
               clipped-left
-               class="blue-grey darken-4"
+             class="blue-grey darken-4"
                hide-on-scroll
-               height="120"
-               
+               height="100"
+               fixed
               
              
                 >
@@ -17,7 +17,7 @@
                 </v-app-bar-nav-icon>
                
 
-        <router-link :to="`/${$i18n.locale}`" >
+        <router-link :to="`/${$i18n.locale}`" class="font-bold text-xl flex items-end">
              <v-img
           alt="boulotman Logo"
           class="shrink mr-2"
@@ -30,8 +30,8 @@
           
     <v-spacer></v-spacer>
 
-              <v-toolbar-items class="mt-14  hidden-sm-and-down">
-                <nav class="items-center mb-1 mt-14 ">                                  
+              <v-toolbar-items class="mt-9 hidden-sm-and-down">
+                <nav class="items-center mb-1 mt-10 ">                                  
     <ul>
       <li class="mr-1 mb-2  lg:mb-0 ">
             <v-btn text exact :to="`/${$i18n.locale}`">{{$t('nav.Home')}}</v-btn>
@@ -42,35 +42,35 @@
       <li class="mr-1 mb-2 lg:mb-0">
       <v-btn text exact :to="`/${$i18n.locale}/about`">{{$t('nav.ABOUT US')}}</v-btn>
       </li>
-     
+       <li class="mr-1 mb-2 lg:mb-0">
+      <v-btn text exact :to="`/${$i18n.locale}/categories`">{{$t('nav.CATEGORIES')}}</v-btn>
+      </li>
        <li class="mr-1 mb-2 lg:mb-0">
       <v-btn text exact :to="`/${$i18n.locale}/rrr`">{{$t('nav.BLOG')}}</v-btn>
       </li>
        <li class="mr-1 mb-2 lg:mb-0">
       <v-btn text exact :to="`/${$i18n.locale}/step`">{{$t('nav.FAQ')}}</v-btn>
       </li>
-       <li class="mr-1 mb-2 lg:mb-0">
-      <LanguageSwitcher/>
-      </li>
-   
+      <li class="mb-1 lg:mb-0 mb-2">
+            <LanguageSwitcher/>
+        </li>
+          
     </ul>
+     
             </nav>
-
               </v-toolbar-items>
 
-  <v-spacer ></v-spacer>
-   
-      
-
-      <v-btn class="buttone text-capitalize mt-16 pa-4 "  :to="`/${$i18n.locale}/services`" v-html="$t('technician')"></v-btn>
+  <v-spacer></v-spacer>
+<v-btn class="buttone text-capitalize mt-16 pa-4 "  :to="`/${$i18n.locale}/services`" v-html="$t('technician')"></v-btn>
       <v-btn rounded @click="toggleTheme" color="primary" class=" text-lowercase ">{{buttonText}}</v-btn>
          <template v-slot:extension>
            <v-tabs align-with-title>
              
-          <v-btn rounded class="ml-4 call red"><v-icon color="yellow" size="24px" left>mdi-phone</v-icon><a class="call" href="tel: +237698884618">Call Us</a></v-btn>
+          <v-btn rounded class="ml-4 mb-n4 call red"><v-icon color="yellow" size="24px" left>mdi-phone</v-icon><a class="call" href="tel: +237698884618">Call Us</a></v-btn>
            </v-tabs>
          </template>
 
+          
      </v-app-bar>
 <v-card>
   <v-navigation-drawer 
@@ -117,7 +117,14 @@
                     </v-list-item-title> 
                 </v-list-item>
 
-                 
+                  <v-list-item class="items">
+                    <v-list-item-icon>
+                        <v-icon >mdi-palette-swatch</v-icon>
+                    </v-list-item-icon>
+                        <v-list-item-title>
+                    <router-link  class="item" :to="`/${$i18n.locale}/categories`">{{$t('nav.CATEGORIES')}}</router-link>                       
+                    </v-list-item-title>    
+                  </v-list-item>
 
                   <v-list-item class="items">
                     <v-list-item-icon>
@@ -204,6 +211,66 @@ data: () => ({
 </script>
 <style scoped>
 
+.call{
+   list-style: none;
+    text-decoration: none;
+    color: wheat;
+    
+}
+.call:hover{
+ 
+  background-color: brown;
+  border-radius: 10px
+   
+    
+}
+.item:hover{
+  color:blue;
+}
+
+
+.li{
+  color: black
+}
+.item{
+   text-decoration-style: none;
+  text-decoration: none;
+   color: black;
+  font: bold;
+}
+ul{
+    list-style: none;
+  
+   display: inline-block;
+
+
+   font: bold;
+  }
+  nav ul li {
+   position: relative;
+    transition: .2s ease-in-out;
+    
+    
+  }
+
+li{
+  display: inline;
+     margin: 0;
+   padding: 0;
+  
+}
+
+
+ul li:hover{
+  color:  blue;
+  background-color: brown;
+  border-radius: 10px
+   
+}
+ul li:active{
+  color: red;
+}
+
 .buttone {
   min-width: 300px;
   min-height: 60px;
@@ -273,78 +340,5 @@ background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgb(185, 209, 79) 100
     opacity: 0;
   }
 }
-
-
-.item:hover{
-  color:blue;
-}
-
-
-.li{
-  color: black
-}
-.item {
-   text-decoration-style: none;
-  text-decoration: none;
-   color: black;
-  font: bold;
-}
-.call{
-   list-style: none;
-    text-decoration: none;
-    color: wheat;
-    
-}
-.call:hover{
- 
-  background-color: brown;
-  border-radius: 10px
-   
-    
-}
-ul{
-    list-style: none;
-  
-   display: inline-block;
-
-
-   font: bold;
- 
-  
-   
- 
- 
-
-  }
-  nav ul li {
- position: relative;
-    transition: .2s ease-in-out;
-
-  }
-
-li{
-  display: inline;
-     margin: 0;
-   padding: 0;
-  
-}
-
-ul li:focus{
-  color:  blue;
- 
-  transform: translateY(-6px);
-   
-}
-ul li:hover{
-  color:  blue;
-  background-color: brown;
-  border-radius:10px;
-  transform: translateY(-6px);
-   
-}
-ul li:active{
-  color: red;
-}
-
 </style>
     

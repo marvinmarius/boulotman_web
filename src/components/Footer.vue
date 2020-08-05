@@ -27,7 +27,7 @@ class="col-md-3 col-lg-2 col-xl-2 mx-auto "
     />
           </router-link>
           
-         <p class="black--text">{{$t('items.titlet')}}</p>
+         <p class="white--text">{{$t('items.titlet')}}</p>
      </div>
       <!-- Grid column -->
 
@@ -35,7 +35,7 @@ class="col-md-3 col-lg-2 col-xl-2 mx-auto "
 
       <!-- Grid column -->
       <div class="col-md-4 col-lg-2 col-xl-2 col-sm-12 mx-auto mt-3 flex">
-        <h3 class="text-capitalize mb-4 yo">{{$t('Useful Links')}}</h3>
+        <h3 class="text-uppercase mb-8 yo">{{$t('Useful Links')}}</h3>
         <p class="v-list-item--link">
               <v-icon color="yellow" size="16px" left>mdi-book-open-page-variant</v-icon>
               <router-link  @click.native="scrollToTop" :to="`/${$i18n.locale}/about`">
@@ -76,10 +76,10 @@ class="col-md-3 col-lg-2 col-xl-2 mx-auto "
 
       <!-- Grid column -->
       <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-        <h3 class="text-capitalize mb-4 font-weight-bold yo">{{ $t('Our Contacts')}}</h3>
+        <h3 class="text-uppercase mb-8 font-weight-bold yo">{{ $t('Our Contacts')}}</h3>
         <p class="v-list-item--link font-smaller"><v-icon color="yellow" size="16px" left>mdi-email</v-icon><a href="https://mail.google.com/mail/?view=cm&fs=1&to=boulotman237@gmail.com">boulotman237@gmail.com</a></p>
          <p class="v-list-item--link font-smaller"><v-icon color="yellow" size="16px" left>mdi-phone</v-icon><a href="tel: +237698884618">(+237)698884618</a></p>
-          <p class="v-list-item--link "><v-icon color="yellow"  size="16px" left>mdi-phone-classic</v-icon>fix: +237 233-478-795</p>
+          <p class="v-list-item--link "><v-icon color="yellow"  size="16px" left>mdi-phone-classic</v-icon><span class="white--text" >fix: +237 233-478-795</span></p>
       </div>
       <!-- Grid column -->
 
@@ -159,7 +159,7 @@ export default {
 <style scoped>
 .v-list-item--link a{
  text-decoration: none;
-  color:wheat;
+  color:white;
   
 }
 .grp p {
@@ -177,13 +177,10 @@ export default {
   color:yellow;
   
 }
-.v-list-item--link a{
 
-  color: black
-  
-}
+
 .yo{
-    color:wheat;
+    color:black
 }
 .xxx{
   color:wheat;
