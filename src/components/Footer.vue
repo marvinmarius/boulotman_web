@@ -180,20 +180,18 @@ export default {
 
 
 .yo{
-    color:black
+    color:wheat
 }
 .xxx{
   color:wheat;
   
-    font-weight: 300;
-    font-size: 30px
+  
 }
 
 .xxxx{
  
   color:wheat;
-    font-weight: 300;
-    font-size: 20px
+ 
 }
 .social-icons
 {
