@@ -61,7 +61,7 @@
               </v-toolbar-items>
 
   <v-spacer></v-spacer>
-<v-btn class="buttone text-capitalize mt-16 pa-4 "  :to="`/${$i18n.locale}/services`" v-html="$t('technician')"></v-btn>
+<v-btn class="buttone text-capitalize mt-16 pa-4 hidden-sm-and-down"  :to="`/${$i18n.locale}/services`" v-html="$t('technician')"></v-btn>
       <v-btn rounded @click="toggleTheme" color="primary" class=" text-lowercase ">{{buttonText}}</v-btn>
          <template v-slot:extension>
            <v-tabs align-with-title>
